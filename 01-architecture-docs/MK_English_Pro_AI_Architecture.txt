@@ -1,0 +1,345 @@
+MK English Pro Ultimate Build Prompt PWA + AI Language Learning System
+
+ROLE
+
+You are an expert: - Full Stack Developer - PWA Architect - UI/UX
+Designer - Database Architect - AI Product Designer
+
+Build MK English Pro from zero.
+
+Do not use previous code. Create a complete Progressive Web Application
+(PWA).
+
+PRODUCT VISION
+
+MK English Pro is an AI-powered personal English learning system.
+
+The app helps users improve:
+
+-   Listening
+-   Speaking
+-   Vocabulary
+-   Pronunciation
+-   Grammar
+-   Conversation
+
+PLATFORM REQUIREMENT
+
+MK English Pro must be developed as a Progressive Web Application (PWA).
+
+It is NOT a native mobile application.
+
+The main experience must be designed for smartphones.
+
+The application must:
+
+-   Install on phone home screen
+-   Work like a mobile app
+-   Support Android and iPhone browsers
+-   Support offline features
+-   Use touch-friendly mobile UI
+
+It must not feel like a website.
+
+DESIGN STYLE
+
+Create a premium mobile language learning interface.
+
+Inspired by: - Duolingo - Memrise - Busuu - LingQ
+
+Requirements:
+
+-   Mobile-first design
+-   Large touch targets
+-   Rounded cards
+-   Smooth animations
+-   Simple navigation
+-   No unnecessary features
+
+LEARNING STRUCTURE
+
+The learning path must be organized:
+
+Level | Season | Chapter | Lesson | Track | Practice | Review
+
+LEVEL SYSTEM
+
+Support:
+
+-   A1 Beginner
+-   A2 Elementary
+-   B1 Intermediate
+-   B2 Upper Intermediate
+-   C1 Advanced
+
+LESSON FLOW
+
+Each lesson contains:
+
+-   Audio
+-   Transcript
+-   Vocabulary
+-   Phrases
+-   Grammar
+-   Practice
+-   Quiz
+-   Review
+
+PROGRESSION SYSTEM
+
+Users must learn step by step.
+
+Example:
+
+Lesson 1 Completed Lesson 2 Available Lesson 3 Locked
+
+New content unlocks after completion.
+
+AUDIO SYSTEM
+
+Support:
+
+-   Upload audio files
+-   Add audio through Google Drive link
+-   External audio source support
+
+Supported formats:
+
+-   MP3
+-   WAV
+-   M4A
+-   OGG
+
+GOOGLE DRIVE AUDIO
+
+Allow creators to add audio using Google Drive links.
+
+System must:
+
+-   Validate link
+-   Check access
+-   Store source type
+-   Play audio
+-   Handle errors with friendly messages
+
+AI AUDIO PROCESSING
+
+Workflow:
+
+Audio | Speech To Text | Transcript | AI Analysis
+
+Generate:
+
+-   Transcript
+-   Sentence timestamps
+-   Vocabulary
+-   Phrases
+-   Grammar
+-   Quiz
+-   Exercises
+
+TRANSCRIPT SYSTEM
+
+Transcript must be interactive.
+
+Features:
+
+-   Sync text with audio
+-   Highlight current sentence
+-   Click sentence to replay
+-   Explain sentence with AI
+-   Save sentences
+-   Add notes
+
+VOCABULARY AI SYSTEM
+
+Automatically extract:
+
+-   Important words
+-   Expressions
+-   Phrasal verbs
+-   Useful sentences
+
+Each vocabulary item includes:
+
+-   Word
+-   Meaning
+-   Pronunciation
+-   Example
+-   Audio
+-   Level
+-   Category
+
+VOCABULARY REVIEW
+
+Support:
+
+-   Flashcards
+-   Fill the blank
+-   Multiple choice
+-   Sentence creation
+-   AI correction
+
+SPACED REPETITION
+
+Review schedule:
+
+-   Tomorrow
+-   3 days
+-   7 days
+-   30 days
+
+Adapt based on user performance.
+
+AI FEATURES
+
+Use AI for:
+
+-   Explaining sentences
+-   Grammar explanations
+-   Creating exercises
+-   Creating quizzes
+-   Conversation practice
+-   Correcting mistakes
+
+AI CONVERSATION
+
+Users can practice speaking with AI.
+
+Support:
+
+-   Text chat
+-   Voice conversation
+
+AI should:
+
+-   Respond naturally
+-   Correct errors
+-   Suggest better sentences
+-   Track weaknesses
+
+SHADOWING MODE
+
+Create speaking practice:
+
+Listen | Pause | Repeat | Compare | Continue
+
+VOICE RECORDING
+
+Users can:
+
+-   Record voice
+-   Compare with original
+-   Save attempts
+
+PROGRESS SYSTEM
+
+Track:
+
+-   Listening time
+-   Vocabulary learned
+-   Lessons completed
+-   Speaking practice
+-   Review history
+
+GAMIFICATION
+
+Include:
+
+-   XP
+-   Levels
+-   Streaks
+-   Daily challenges
+-   Achievements
+
+OFFLINE PWA FEATURES
+
+Support:
+
+-   Service Worker
+-   Offline lessons
+-   Cached audio
+-   Offline progress
+-   Sync after reconnecting
+
+MAIN PAGES
+
+Bottom navigation:
+
+-   Home
+-   Learn
+-   Listen
+-   Practice
+-   Profile
+
+CREATOR MODE
+
+Create a content management system.
+
+Creator can:
+
+-   Create levels
+-   Create seasons
+-   Create chapters
+-   Create lessons
+-   Add audio
+-   Add Google Drive audio links
+-   Generate transcript
+-   Generate vocabulary
+-   Generate quizzes
+
+DATABASE
+
+Use Supabase.
+
+Store:
+
+-   Users
+-   Levels
+-   Seasons
+-   Chapters
+-   Lessons
+-   Audio sources
+-   Transcripts
+-   Vocabulary
+-   Progress
+-   Notes
+-   Reviews
+
+REALTIME SYNC
+
+Support multiple devices.
+
+Changes should appear automatically.
+
+No manual refresh required.
+
+SECURITY
+
+Never expose AI API keys in frontend.
+
+Correct:
+
+PWA | Backend | AI Services
+
+ERROR HANDLING
+
+Never show technical errors.
+
+Show friendly messages.
+
+FINAL GOAL
+
+Build MK English Pro as:
+
+“A premium AI-powered English teacher inside a phone, delivered as a
+Progressive Web App.”
+
+The final product must be:
+
+-   Fast
+-   Beautiful
+-   Mobile-first
+-   Intelligent
+-   Easy to use
+-   Ready for future expansion
