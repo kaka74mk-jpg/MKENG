@@ -130,11 +130,6 @@ Deno.serve(async (req: Request) => {
     // ------------------------------------------------------------
     const storagePath = `${userId}/${lesson_id}/${fileId}.${extension}`;
 
-    if (!storagePath || !storagePath.trim()) {
-      await markError(adminClient, audio_source_id, userId, "مسیر ذخیره‌سازی فایل ساخته نشد.");
-      return jsonResponse({ error: "storage_path could not be generated" }, 500);
-    }
-
     const { error: uploadError } = await adminClient.storage
       .from("lesson-audio")
       .upload(storagePath, fileBytes, {
@@ -163,8 +158,6 @@ Deno.serve(async (req: Request) => {
       .eq("user_id", userId);
 
     if (updateError) {
-      // جلوگیری از باقی ماندن فایل بدون رکورد دیتابیس
-      await adminClient.storage.from("lesson-audio").remove([storagePath]);
       return jsonResponse({ error: `DB update failed: ${updateError.message}` }, 500);
     }
 
