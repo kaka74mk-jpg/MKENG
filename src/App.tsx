@@ -40,7 +40,7 @@ export default function App() {
       setLoading(false);
     });
 
-    // Keep session in sync (login, logout, magic-link redirect, token refresh).
+    // Keep session in sync (login, logout, password reset, token refresh).
     const { data: subscription } = supabase.auth.onAuthStateChange((_event, newSession) => {
       setSession(newSession);
       setLoading(false);
