@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  /* English fragments inside Persian UI should read left-to-right
+     without breaking the surrounding RTL flow. */
+  [dir="ltr"] {
+    unicode-bidi: isolate;
+  }
+
+  ::selection {
+    background-color: theme("colors.amber.DEFAULT");
+    color: theme("colors.ink.DEFAULT");
+  }
+
+  /* Visible keyboard focus everywhere — accessibility floor. */
+  :focus-visible {
+    outline: 2px solid theme("colors.amber.DEFAULT");
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
