@@ -1,0 +1,45 @@
+name: Phase 3.6 Controlled Production Import
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type IMPORT to authorize the one-time production import"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    if: ${{ github.event.inputs.confirm == 'IMPORT' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Repository and secret preflight
+        run: node scripts/phase3-6-preflight.mjs
+
+      - name: Run controlled production importer
+        if: ${{ success() }}
+        run: node scripts/phase3-6-import.mjs
+
+  rejected:
+    if: ${{ github.event.inputs.confirm != 'IMPORT' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reject unauthorized run
+        run: |
+          echo "Import not authorized. The workflow requires the exact confirmation value IMPORT."
+          exit 1
